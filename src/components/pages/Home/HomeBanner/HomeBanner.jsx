@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router"; 
+import { Link } from "react-router";
 import ResumeCv from "../../Resume/CV/ResumeCv";
 
 const HomeBanner = () => {
@@ -16,13 +16,31 @@ const HomeBanner = () => {
 
           {/* Left Side Content */}
           <div>
-            <h1 className="text-5xl font-bold text-primary">
-              Hi, I'm Asif Ali Jihat
+            <h1 className="text-5xl font-bold text-primary mb-4">
+              Hi, I'm <span className="text-accent">Asif Ali Jihat</span>
             </h1>
-            <p className="py-6 text-base-content">
-              A passionate MERN Stack Developer with strong knowledge of React,
-              Node.js, MongoDB, and Express. I also have skills in video
-              editing, typing, and electrical & navigation.
+            <p className="py-6 text-base-content leading-relaxed max-w-2xl">
+              A passionate{" "}
+              <span className="text-secondary font-medium">
+                MERN Stack Developer
+              </span>
+              with hands-on experience in{" "}
+              <span className="text-secondary">React, Node.js, MongoDB,</span>{" "}
+              and <span className="text-secondary">Express</span>. Skilled in
+              building
+              <span className="text-primary font-medium">
+                {" "}
+                responsive
+              </span>,{" "}
+              <span className="text-primary font-medium">scalable</span>, and{" "}
+              <span className="text-primary font-medium">user-friendly</span>{" "}
+              web applications with clean, maintainable code and optimized
+              performance. Eager to contribute to innovative projects and
+              deliver impactful solutions as part of a{" "}
+              <span className="text-accent font-medium">
+                dynamic development team
+              </span>
+              .
             </p>
             <div className="flex flex-wrap gap-3">
               <ResumeCv />
