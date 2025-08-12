@@ -29,7 +29,7 @@ const testimonials = [
 
 const Testimonials = () => {
     return (
-        <div className="min-h-screen bg-base-200 py-10 px-4">
+        <div className=" bg-base-200 py-12 px-4 my-12">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-4xl font-bold text-center text-primary mb-10">What Clients Say</h2>
 

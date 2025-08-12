@@ -3,7 +3,7 @@ import images from "../../../../public/20210702_180749.jpg";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-base-200 py-10 px-4">
+    <div className="bg-base-200 py-10 px-4 my-12">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10">
         {/* Left Side Image */}
         <div className="flex-1">
