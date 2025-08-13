@@ -1,15 +1,15 @@
-import React from "react";
-import { Link } from "react-router";
 import ResumeCv from "../../Resume/CV/ResumeCv";
+import SocialLinks from "../SocialLinks/SocialLinks";
+import profile from "../../../../assets/20210702_180742.jpg";
 
 const HomeBanner = () => {
   return (
-    <div>
-      <div className="hero min-h-screen bg-base-200">
+ <div>
+      <div className="hero py-12 my-12 bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           {/* Right Side Image */}
           <img
-            src="https://i.ibb.co/wFxhVsLT/MERN-Stack-Development.png"
+            src={profile}
             alt="Developer"
             className="lg:max-w-xl rounded-lg shadow-2xl"
           />
@@ -43,11 +43,12 @@ const HomeBanner = () => {
               .
             </p>
             <div className="flex flex-wrap gap-3">
-              <ResumeCv />
-              <Link to="/contact" className="btn btn-outline btn-secondary">
-                Contact Me
-              </Link>
-            </div>
+              <ResumeCv />           
+            </div> 
+            <div className="mt-2">
+              <SocialLinks /> 
+              </div>
+            
           </div>
         </div>
       </div>
@@ -56,3 +57,5 @@ const HomeBanner = () => {
 };
 
 export default HomeBanner;
+
+
