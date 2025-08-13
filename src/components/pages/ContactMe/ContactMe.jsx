@@ -1,5 +1,5 @@
 import React from "react";
-import { FaEnvelope, FaPhone, FaWhatsapp } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -8,7 +8,7 @@ const containerVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      staggerChildren: 0.3,
+      staggerChildren: 0.2,
       duration: 0.6,
       ease: "easeOut",
     },
@@ -24,110 +24,85 @@ const itemVariants = {
   },
 };
 
-const ContactMe = () => {
+const ContactMeSimple = () => {
   return (
     <motion.div
-      className="bg-gradient-to-br bg-base-200 px-4 py-12 my-12 sm:my-16 lg:my-20"
+      className="bg-base-200 px-4 py-12 my-12 sm:my-16 lg:my-20"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: false, amount: 0.3 }}
       variants={containerVariants}
     >
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
-        {/* Contact Form */}
-        <motion.div
-          className="backdrop-blur-md bg-white/70 border border-white/30 rounded-2xl shadow-2xl p-8 sm:p-12 transition-all duration-300"
-          variants={itemVariants}
-        >
-          <h2 className="text-4xl font-bold text-center text-primary mb-8 drop-shadow">
-            Contact Me
+      <div className="max-w-4xl mx-auto flex flex-col gap-10">
+
+        {/* Intro Text */}
+        <motion.div variants={itemVariants}>
+          <h2 className="text-4xl font-bold text-center text-primary mb-4">
+            I'm always open to connecting!
           </h2>
-
-          <form className="space-y-6">
-            <motion.div className="form-control" variants={itemVariants}>
-              <label className="label">
-                <span className="label-text text-base font-medium text-gray-700">
-                  Your Name
-                </span>
-              </label>
-              <input
-                type="text"
-                placeholder="Enter your name"
-                className="input input-bordered input-primary w-full focus:outline-none focus:ring-2 focus:ring-primary"
-                required
-              />
-            </motion.div>
-
-            <motion.div className="form-control" variants={itemVariants}>
-              <label className="label">
-                <span className="label-text text-base font-medium text-gray-700">
-                  Your Email
-                </span>
-              </label>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="input input-bordered input-primary w-full focus:outline-none focus:ring-2 focus:ring-primary"
-                required
-              />
-            </motion.div>
-
-            <motion.div className="form-control" variants={itemVariants}>
-              <label className="label">
-                <span className="label-text text-base font-medium text-gray-700">
-                  Your Message
-                </span>
-              </label>
-              <textarea
-                placeholder="Type your message..."
-                className="textarea textarea-bordered textarea-primary h-36 w-full focus:outline-none focus:ring-2 focus:ring-primary"
-                required
-              ></textarea>
-            </motion.div>
-
-            <motion.button
-              type="submit"
-              className="btn btn-primary w-full text-lg font-semibold tracking-wide hover:scale-[1.02] transition-transform duration-200"
-              variants={itemVariants}
-            >
-              Send Message
-            </motion.button>
-          </form>
+          <p className="text-center text-base-content text-lg leading-relaxed">
+            Whether it’s about a new project, a creative idea, or a potential collaboration, feel free to reach out anytime!
+          </p>
         </motion.div>
 
-        {/* Contact Information */}
-        <motion.div
-          className="backdrop-blur-md bg-white/70 border border-white/30 rounded-2xl shadow-2xl p-8 sm:p-12 flex flex-col justify-center"
+        {/* Direct Contact */}
+        <motion.div 
+          className="bg-white/70 backdrop-blur-md border border-white/30 rounded-2xl shadow-2xl p-8 flex flex-col gap-4"
           variants={itemVariants}
         >
-          <h2 className="text-3xl font-bold text-primary mb-6 drop-shadow">
-            Contact Information
-          </h2>
-          <motion.ul className="space-y-4 text-lg text-gray-700" variants={itemVariants}>
-            <motion.li className="flex items-center gap-3" variants={itemVariants}>
-              <FaEnvelope className="text-primary text-xl" />
+          <h3 className="text-2xl font-semibold text-secondary mb-3">Direct Contact</h3>
+          <ul className="space-y-2 text-lg text-gray-700">
+            <li className="flex items-center gap-3">
+              <FaEnvelope className="text-primary text-xl" /> 
               <span>mdasifalijihat@gmail.com</span>
-            </motion.li>
-            <motion.li className="flex items-center gap-3" variants={itemVariants}>
-              <FaPhone className="text-primary text-xl" />
+            </li>
+            <li className="flex items-center gap-3">
+              <FaPhone className="text-primary text-xl" /> 
               <span>+8801915915094</span>
-            </motion.li>
-            <motion.li className="flex items-center gap-3" variants={itemVariants}>
-              <FaWhatsapp className="text-primary text-xl" />
-              <a
-                href="https://wa.me/8801915915094"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-green-600"
-              >
+            </li>
+            <li className="flex items-center gap-3">
+              <FaWhatsapp className="text-primary text-xl" /> 
+              <a href="https://wa.me/8801915915094" target="_blank" rel="noopener noreferrer" className="underline hover:text-green-600">
                 +8801915915094
               </a>
-            </motion.li>
-          </motion.ul>
+            </li>
+          </ul>
         </motion.div>
+
+        {/* Professional Profiles */}
+        <motion.div 
+          className="bg-white/70 backdrop-blur-md border border-white/30 rounded-2xl shadow-2xl p-8 flex flex-col gap-4"
+          variants={itemVariants}
+        >
+          <h3 className="text-2xl font-semibold text-secondary mb-3">Professional Profiles</h3>
+          <ul className="space-y-2 text-lg text-gray-700">
+            <li className="flex items-center gap-3">
+              <FaLinkedin className="text-blue-600 text-xl" />
+              <a href="https://www.linkedin.com/in/md-asif-ali-jihat-976281217/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-700">
+                LinkedIn Profile
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <FaGithub className="text-gray-800 text-xl" />
+              <a href="https://github.com/mdasifalijihat" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-900">
+                GitHub Profile
+              </a>
+            </li>
+          </ul>
+        </motion.div>
+
+        {/* Preferred Contact Methods */}
+        <motion.div 
+          className="bg-white/70 backdrop-blur-md border border-white/30 rounded-2xl shadow-2xl p-8 flex flex-col gap-4"
+          variants={itemVariants}
+        >
+          <h3 className="text-2xl font-semibold text-secondary mb-3">Preferred Contact Methods</h3>
+          <p className="text-lg text-gray-700">Email, LinkedIn, WhatsApp</p>
+        </motion.div>
+
       </div>
     </motion.div>
   );
 };
 
-export default ContactMe;
+export default ContactMeSimple;
