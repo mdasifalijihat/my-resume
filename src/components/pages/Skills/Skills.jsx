@@ -1,41 +1,64 @@
 import React from "react";
-import "./Skills.css";
+import { motion } from "framer-motion";
 import {
-  FaReact,
-  FaNodeJs,
-  FaDatabase,
-  FaHtml5,
-  FaCss3Alt,
-  FaLaptopCode,
-  FaBolt,
-  FaKeyboard,
-  FaGitAlt,
-  FaTools,
-} from "react-icons/fa";
+  SiHtml5,
+  SiCss3,
+  SiTailwindcss,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiReactrouter,
+  SiFirebase,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiGit,
+  SiGithub, 
+  SiNetlify,
+  SiVercel,
+  SiFigma
+} from "react-icons/si";
+import "./Skills.css";
+import { VscVscodeInsiders } from "react-icons/vsc";
 
 const skillCategories = {
   Frontend: [
-    { icon: <FaHtml5 className="text-4xl text-orange-500" />, name: "HTML5" },
-    { icon: <FaCss3Alt className="text-4xl text-blue-500" />, name: "CSS3" },
-    { icon: <FaReact className="text-4xl text-cyan-500" />, name: "React.js" },
+    { icon: <SiHtml5 className="text-4xl text-orange-600" />, name: "HTML5" },
+    { icon: <SiCss3 className="text-4xl text-blue-600" />, name: "CSS3" },
+    { icon: <SiTailwindcss className="text-4xl text-teal-400" />, name: "Tailwind CSS" },
+    { icon: <SiJavascript className="text-4xl text-yellow-500" />, name: "JavaScript" },
+    { icon: <SiReact className="text-4xl text-cyan-500" />, name: "React.js" },
+    { icon: <SiNextdotjs className="text-4xl text-black" />, name: "Next.js" },
+    { icon: <SiReactrouter className="text-4xl text-purple-600" />, name: "React Router" },
+    { icon: <SiFirebase className="text-4xl text-yellow-600" />, name: "Firebase" },
   ],
   Backend: [
-    { icon: <FaNodeJs className="text-4xl text-green-600" />, name: "Node.js" },
-    { icon: <FaLaptopCode className="text-4xl text-purple-600" />, name: "Express.js" },
-    { icon: <FaDatabase className="text-4xl text-gray-700" />, name: "MongoDB" },
+    { icon: <SiNodedotjs className="text-4xl text-green-600" />, name: "Node.js" },
+    { icon: <SiExpress className="text-4xl text-gray-800" />, name: "Express.js" },
+    { icon: <SiMongodb className="text-4xl text-green-800" />, name: "MongoDB" },
   ],
   Tools: [
-    { icon: <FaGitAlt className="text-4xl text-red-500" />, name: "Git & GitHub" },
-    { icon: <FaKeyboard className="text-4xl text-gray-600" />, name: "Typing (360 hr)" },
-    { icon: <FaBolt className="text-4xl text-yellow-500" />, name: "Electrical & Navigation" },
-  ],
+    { icon: <SiGit className="text-4xl text-red-600" />, name: "Git" },
+    { icon: <SiGithub className="text-4xl text-gray-900" />, name: "GitHub" },
+    { icon: <VscVscodeInsiders className="text-4xl text-blue-500" />, name: "VS Code" },
+    { icon: <SiNetlify className="text-4xl text-green-500" />, name: "Netlify" },
+    { icon: <SiVercel className="text-4xl text-black" />, name: "Vercel" },
+    { icon: <SiFigma className="text-4xl text-pink-500" />, name: "Figma" },
+  ]
 };
 
 const SkillCard = ({ icon, name }) => (
-  <div className="skill-card text-center p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+  <motion.div
+    className="skill-card text-center p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300"
+    initial={{ scale: 0.8, opacity: 0 }}
+    whileInView={{ scale: 1, opacity: 1 }}
+    whileHover={{ scale: 1.05 }}
+    transition={{ type: "spring", stiffness: 100, duration: 0.4 }}
+    viewport={{ once: false }}
+  >
     <div className="mb-2 flex justify-center">{icon}</div>
     <p className="text-base font-semibold">{name}</p>
-  </div>
+  </motion.div>
 );
 
 const Skills = () => {

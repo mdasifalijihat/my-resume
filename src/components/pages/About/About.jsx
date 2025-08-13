@@ -1,21 +1,33 @@
 import React from "react";
+import { motion } from "framer-motion";
 import images from "../../../../public/20210702_180749.jpg";
 
 const About = () => {
   return (
     <div className="bg-base-200 py-10 px-4 my-12">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10">
-        {/* Left Side Image */}
-        <div className="flex-1">
+        
+        {/* Left Side Image Animation */}
+        <motion.div
+          className="flex-1"
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <img
             src={images}
             alt="Asif Ali Jihat"
             className="rounded-xl shadow-lg"
           />
-        </div>
+        </motion.div>
 
-        {/* Right Side Content */}
-        <div className="flex-1">
+        {/* Right Side Content Animation */}
+        <motion.div
+          className="flex-1"
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        >
           <h2 className="text-4xl font-bold text-primary mb-4">About Me</h2>
           <p className="mb-4 text-base-content leading-relaxed">
             I’m <strong className="text-primary">MD ASIF ALI JIHAT</strong>, a
@@ -65,14 +77,17 @@ const About = () => {
             </ul>
           </div>
 
-          {/* Button */}
-          <a
+          {/* Button Animation */}
+          <motion.a
             href="mailto:mdasifalijihat@gmail.com"
             className="btn btn-primary shadow-md hover:shadow-lg transition"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
           >
             Hire Me
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
       </div>
     </div>
   );

@@ -1,11 +1,10 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { Link } from 'react-router'; 
 
 const Footer = () => {
   return (
-    <footer className="bg-base-200 text-base-content mt-12">
-      <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-white text-base-content mt-12 shadow-lg shadow-indigo-200/40 rounded-t-xl ">
+      <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         
         {/* Branding */}
         <div>
@@ -13,33 +12,6 @@ const Footer = () => {
           <p className="text-sm text-gray-600">
             Passionate MERN Stack Developer based in Rangpur, Bangladesh.
           </p>
-        </div>
-
-        {/* Useful Links */}
-        <div>
-          <h3 className="font-semibold mb-3">Quick Links</h3>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <Link to="/" className="hover:underline hover:text-primary transition">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="hover:underline hover:text-primary transition">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/projects" className="hover:underline hover:text-primary transition">
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="hover:underline hover:text-primary transition">
-                Contact
-              </Link>
-            </li>
-          </ul>
         </div>
 
         {/* Social Links */}
