@@ -29,7 +29,7 @@ const Projects = () => {
               custom={index}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.3 }} // 🔹 বারবার animation trigger হবে
               variants={cardVariants}
             >
               <img

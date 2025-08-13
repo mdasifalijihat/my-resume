@@ -33,7 +33,7 @@ const ContactMe = () => {
       viewport={{ once: true, amount: 0.3 }}
       variants={containerVariants}
     >
-      <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
         {/* Contact Form */}
         <motion.div
           className="backdrop-blur-md bg-white/70 border border-white/30 rounded-2xl shadow-2xl p-8 sm:p-12 transition-all duration-300"
