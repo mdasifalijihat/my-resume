@@ -11,25 +11,28 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   const scrollToSection = (id) => {
-    if (location.pathname !== "/") {      
+    if (location.pathname !== "/") {
       navigate("/", { state: { scrollTo: id } });
     } else {
       const section = document.getElementById(id);
       if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
+        const yOffset = -80; // navbar height অনুযায়ী মান দিন
+        const y =
+          section.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
       }
     }
     closeMenu();
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow px-6 py-4 z-50">
-      <div className="container mx-auto flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full shadow px-4 py-4 z-50 bg-white">
+      <div className="flex items-center justify-between container mx-auto">
         <div
           className="text-2xl font-bold text-blue-600 cursor-pointer"
           onClick={() => scrollToSection("home")}
         >
-          RESUME
+          <span> ASIF </span>
         </div>
 
         <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
