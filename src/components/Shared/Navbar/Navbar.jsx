@@ -37,7 +37,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
+        <ul className="hidden md:flex space-x-6 text-white/80 hover:text-white font-medium">
           {["home", "about", "skills", "projects", "contact"].map((item) => (
             <li
               key={item}
@@ -55,7 +55,7 @@ const Navbar = () => {
             href="https://github.com/mdasifalijihat"
             target="_blank"
             rel="noreferrer"
-            className="text-gray-600 hover:text-black transition"
+            className="text-white/70 hover:text-white transition"
           >
             GitHub
           </a>
@@ -95,7 +95,7 @@ const Navbar = () => {
               href="https://github.com/mdasifalijihat"
               target="_blank"
               rel="noreferrer"
-              className="block text-gray-600 hover:text-black"
+              className=" text-white/60 hover:text-white"
             >
               GitHub
             </a>
