@@ -26,15 +26,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full shadow px-4 py-4 z-50 bg-white">
-      <div className="flex items-center justify-between container mx-auto">
+    <nav className="fixed top-0 left-0 w-full shadow px-4 py-4 z-50 bg-content text-primary-content ">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        {/* Logo */}
         <div
-          className="text-2xl font-bold text-blue-600 cursor-pointer"
+          className="text-xl md:text-2xl font-bold text-blue-600 cursor-pointer whitespace-nowrap"
           onClick={() => scrollToSection("home")}
         >
-          <span> ASIF </span>
+          <span>ASIF</span>
         </div>
 
+        {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
           {["home", "about", "skills", "projects", "contact"].map((item) => (
             <li
@@ -47,7 +49,8 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="hidden md:flex items-center space-x-4">
+        {/* Desktop Buttons */}
+        <div className="hidden md:flex items-center space-x-4 shrink-0">
           <a
             href="https://github.com/mdasifalijihat"
             target="_blank"
@@ -66,13 +69,15 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="md:hidden flex items-center space-x-2">
+        {/* Mobile Menu Button */}
+        <div className="md:hidden flex items-center">
           <button onClick={toggleMenu} className="text-2xl text-blue-600">
             {isOpen ? <FiX /> : <FiMenu />}
           </button>
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden mt-2 bg-white shadow-lg rounded-lg p-4 space-y-3">
           {["home", "about", "skills", "projects", "contact"].map((item) => (

@@ -47,22 +47,22 @@ const ContactMeSimple = () => {
 
         {/* Direct Contact */}
         <motion.div 
-          className="bg-white/70 backdrop-blur-md border border-white/30 rounded-2xl shadow-2xl p-8 flex flex-col gap-4"
+          className="bg-base-100 backdrop-blur-md border border-white/30 rounded-2xl shadow-2xl p-8 flex flex-col gap-4"
           variants={itemVariants}
         >
           <h3 className="text-2xl font-semibold text-secondary mb-3">Direct Contact</h3>
           <ul className="space-y-2 text-lg text-gray-700">
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-primary text-xl" /> 
-              <span>mdasifalijihat@gmail.com</span>
+              <span className="text-white/60 hover:text-white">mdasifalijihat@gmail.com</span>
             </li>
             <li className="flex items-center gap-3">
               <FaPhone className="text-primary text-xl" /> 
-              <span>+8801915915094</span>
+              <span className=" text-white/60 hover:text-white">+8801915915094</span>
             </li>
             <li className="flex items-center gap-3">
               <FaWhatsapp className="text-primary text-xl" /> 
-              <a href="https://wa.me/8801915915094" target="_blank" rel="noopener noreferrer" className="underline hover:text-green-600">
+              <a href="https://wa.me/8801915915094" target="_blank" rel="noopener noreferrer" className="underline text-white/60 hover:text-white">
                 +8801915915094
               </a>
             </li>
@@ -71,20 +71,20 @@ const ContactMeSimple = () => {
 
         {/* Professional Profiles */}
         <motion.div 
-          className="bg-white/70 backdrop-blur-md border border-white/30 rounded-2xl shadow-2xl p-8 flex flex-col gap-4"
+          className="bg-base-100 backdrop-blur-md border border-white/30 rounded-2xl shadow-2xl p-8 flex flex-col gap-4"
           variants={itemVariants}
         >
           <h3 className="text-2xl font-semibold text-secondary mb-3">Professional Profiles</h3>
           <ul className="space-y-2 text-lg text-gray-700">
             <li className="flex items-center gap-3">
               <FaLinkedin className="text-blue-600 text-xl" />
-              <a href="https://www.linkedin.com/in/md-asif-ali-jihat-976281217/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-700">
+              <a href="https://www.linkedin.com/in/md-asif-ali-jihat-976281217/" target="_blank" rel="noopener noreferrer" className="underline text-white/60 hover:text-white">
                 LinkedIn Profile
               </a>
             </li>
             <li className="flex items-center gap-3">
-              <FaGithub className="text-gray-800 text-xl" />
-              <a href="https://github.com/mdasifalijihat" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-900">
+              <FaGithub className="text-gray text-xl" />
+              <a href="https://github.com/mdasifalijihat" target="_blank" rel="noopener noreferrer" className="underline text-white/60 hover:text-white">
                 GitHub Profile
               </a>
             </li>
@@ -93,11 +93,11 @@ const ContactMeSimple = () => {
 
         {/* Preferred Contact Methods */}
         <motion.div 
-          className="bg-white/70 backdrop-blur-md border border-white/30 rounded-2xl shadow-2xl p-8 flex flex-col gap-4"
+          className="bg-base-100 backdrop-blur-md border border-white/30 rounded-2xl shadow-2xl p-8 flex flex-col gap-4"
           variants={itemVariants}
         >
           <h3 className="text-2xl font-semibold text-secondary mb-3">Preferred Contact Methods</h3>
-          <p className="text-lg text-gray-700">Email, LinkedIn, WhatsApp</p>
+          <p className="text-lg text-white/60">Email, LinkedIn, WhatsApp</p>
         </motion.div>
 
       </div>

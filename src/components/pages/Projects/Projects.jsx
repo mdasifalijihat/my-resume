@@ -25,7 +25,7 @@ const Projects = () => {
           {projectsData.map((project, index) => (
             <motion.div
               key={project.id}
-              className="card bg-white shadow-xl hover:shadow-2xl rounded-lg overflow-hidden"
+              className="card bg-base-100 shadow-xl hover:shadow-2xl rounded-lg overflow-hidden"
               custom={index}
               initial="hidden"
               whileInView="visible"

@@ -3,13 +3,13 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-base-content mt-12 shadow-lg shadow-indigo-200/40 rounded-t-xl ">
+    <footer className="text-base-content mt-12 shadow-lg shadow-indigo-200/40 rounded-t-xl ">
       <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         
         {/* Branding */}
         <div>
           <h2 className="text-2xl font-bold text-primary mb-3">MD ASIF ALI JIHAT</h2>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-white/60 hover:text-white">
             Passionate MERN Stack Developer based in Rangpur, Bangladesh.
           </p>
         </div>
@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="text-center py-4 border-t border-gray-300 text-gray-600 text-sm">
+      <div className="text-center py-4 border-t border-gray-300 text-white/60 hover:text-white text-sm">
         © {new Date().getFullYear()} MD ASIF ALI JIHAT. All rights reserved.
       </div>
     </footer>
